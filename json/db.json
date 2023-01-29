@@ -1,0 +1,247 @@
+{
+  "bestproduct": [
+    {
+      "id": 8,
+      "name": "Snack Pack",
+      "harga": "40000",
+      "image": "Snack Pack.png"
+    },
+    {
+      "id": 9,
+      "name": "Simple Pack",
+      "harga": "50000",
+      "image": "Simple Pack.png"
+    },
+    {
+      "id": 9,
+      "name": "Sweet Pack",
+      "harga": "60000",
+      "image": "Sweet Pack.png"
+    }
+  ],
+  "products": [
+    {
+      "id": 1,
+      "name": "Spaghetti",
+      "harga": "30000",
+      "image": "Spaghetti.png"
+    },
+    {
+      "id": 2,
+      "name": "Steak",
+      "harga": "40000",
+      "image": "Steak.png"
+    },
+    {
+      "id": 3,
+      "name": "Taichan Satay",
+      "harga": "25000",
+      "image": "Taichan Satay.png"
+    },
+    {
+      "id": 4,
+      "name": "Chicken Soto",
+      "harga": "20000",
+      "image": "Chicken Soto.png"
+    },
+    {
+      "id": 5,
+      "name": "Samgyetang",
+      "harga": "30000",
+      "image": "Samgyetang.png"
+    },
+    {
+      "id": 6,
+      "name": "Bibimbap",
+      "harga": "40000",
+      "image": "Bibimbap.png"
+    },
+    {
+      "id": 6,
+      "name": "Medium Pack",
+      "harga": "30000",
+      "image": "Medium Pack.png"
+    },
+    {
+      "id": 7,
+      "name": "Class Pack",
+      "harga": "35000",
+      "image": "Class Pack.png"
+    },
+    {
+      "id": 8,
+      "name": "Snack Pack",
+      "harga": "40000",
+      "image": "Snack Pack.png"
+    },
+    {
+      "id": 9,
+      "name": "Simple Pack",
+      "harga": "50000",
+      "image": "Simple Pack.png"
+    },
+    {
+      "id": 9,
+      "name": "Sweet Pack",
+      "harga": "60000",
+      "image": "Sweet Pack.png"
+    },
+    {
+      "id": 9,
+      "name": "Elite Pack",
+      "harga": "70000",
+      "image": "Elite Pack.png"
+    }
+  ],
+  "keranjang": [
+    {
+      "jumlah_pemesanan": "2",
+      "keterangan": "Pedsa",
+      "makanans": {
+        "id": 5,
+        "name": "Samgyetang",
+        "harga": "30000",
+        "image": "Samgyetang.png"
+      },
+      "id": 1
+    }
+  ],
+  "orders": [
+    {
+      "nama": "Res",
+      "noMeja": "2",
+      "keranjang": [
+        {
+          "jumlah_pemesanan": "1",
+          "makanans": {
+            "id": 1,
+            "name": "Spaghetti",
+            "harga": "30000",
+            "image": "Spaghetti.png"
+          },
+          "id": 1
+        }
+      ],
+      "id": 1
+    },
+    {
+      "nama": "Riz",
+      "noMeja": "1",
+      "keranjang": [
+        {
+          "jumlah_pemesanan": "43",
+          "makanans": {
+            "id": 2,
+            "name": "Steak",
+            "harga": "40000",
+            "image": "Steak.png"
+          },
+          "id": 1
+        },
+        {
+          "jumlah_pemesanan": "2",
+          "keterangan": "Tambah saos",
+          "makanans": {
+            "id": 9,
+            "name": "Simple Pack",
+            "harga": "50000",
+            "image": "Simple Pack.png"
+          },
+          "id": 2
+        }
+      ],
+      "id": 2
+    },
+    {
+      "nama": "Riz",
+      "noMeja": "2",
+      "keranjang": [
+        {
+          "jumlah_pemesanan": "2",
+          "keterangan": "pedas",
+          "makanans": {
+            "id": 1,
+            "name": "Spaghetti",
+            "harga": "30000",
+            "image": "Spaghetti.png"
+          },
+          "id": 1
+        }
+      ],
+      "id": 3
+    },
+    {
+      "nama": "Azwar",
+      "noMeja": "20",
+      "keranjang": [
+        {
+          "jumlah_pemesanan": "44",
+          "keterangan": "asd",
+          "makanans": {
+            "id": 1,
+            "name": "Spaghetti",
+            "harga": "30000",
+            "image": "Spaghetti.png"
+          },
+          "id": 1
+        },
+        {
+          "jumlah_pemesanan": "20",
+          "keterangan": "100 tusuk",
+          "makanans": {
+            "id": 3,
+            "name": "Taichan Satay",
+            "harga": "25000",
+            "image": "Taichan Satay.png"
+          },
+          "id": 2
+        }
+      ],
+      "id": 4
+    },
+    {
+      "nama": "akbar ",
+      "noMeja": "1",
+      "keranjang": [
+        {
+          "jumlah_pemesanan": "1",
+          "keterangan": "-",
+          "makanans": {
+            "id": 2,
+            "name": "Steak",
+            "harga": "40000",
+            "image": "Steak.png"
+          },
+          "id": 1
+        },
+        {
+          "jumlah_pemesanan": "23",
+          "keterangan": "pedas",
+          "makanans": {
+            "id": 9,
+            "name": "Simple Pack",
+            "harga": "50000",
+            "image": "Simple Pack.png"
+          },
+          "id": 2
+        }
+      ],
+      "id": 5
+    }
+  ],
+  "feedback": [
+    {
+      "nama": "Rizqi",
+      "email": "rizqi@gmail.com",
+      "message": "This is very nice!",
+      "feedback": [],
+      "id": 1
+    },
+    {
+      "nama": "Kira",
+      "email": "kria@gmail.com",
+      "message": "Kirakira",
+      "id": 2
+    }
+  ]
+}
