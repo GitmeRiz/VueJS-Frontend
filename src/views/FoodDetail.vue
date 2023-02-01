@@ -41,12 +41,12 @@
               <input
                 type="number"
                 class="form-control"
-                v-model="pesan.jumlah_pemesanan"
+                v-model="pesan.jumlahpesan"
               />
               <div class="form-group">
                 <label for="keterangan" class="mt-3">Keterangan</label>
                 <textarea
-                  v-model="pesan.keterangan"
+                  v-model="pesan.ketrangan"
                   class="form-control"
                   placeholder="Pedas, tambah nasi ..."
                 ></textarea>
@@ -82,10 +82,10 @@ export default {
       this.makanan = data;
     },
     pemesanan() {
-      if (this.pesan.jumlah_pemesanan) {
+      if (this.pesan.jumlahpesan) {
         this.pesan.makanans = this.makanan;
         axios
-          .post("http://localhost:3000/keranjang", this.pesan)
+          .post("http://localhost:3000/cart", this.pesan)
           .then(() => {
             this.$router.push({ path: "/keranjang" });
             this.$toast.success("Sukses Masuk Keranjang", {

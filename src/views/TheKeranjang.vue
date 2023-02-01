@@ -11,10 +11,7 @@
                 <router-link to="/" class="text-dark">Home</router-link>
               </li>
               <li class="breadcrumb-item">
-                <router-link to="/makanan" class="text-dark">Makanan</router-link>
-              </li>
-              <li class="breadcrumb-item">
-                <router-link to="/minuman" class="text-dark">Minuman</router-link>
+                <router-link to="/products" class="text-dark">Products</router-link>
               </li>
               <li class="breadcrumb-item active" aria-current="page">Keranjang</li>
             </ol>
@@ -45,18 +42,18 @@
                   <th>{{ index + 1 }}</th>
                   <td>
                     <img
-                      :src="'../assets/images/' + krjg.makanans.image"
+                      :src="krjg.makanans.url"
                       class="img-fluid shadow"
                     />
                   </td>
                   <td>{{ krjg.makanans.name }}</td>
-                  <td>{{ krjg.keterangan ? krjg.keterangan : "-" }}</td>
-                  <td>{{ krjg.jumlah_pemesanan }} </td>
+                  <td>{{ krjg.ketrangan ? krjg.ketrangan : "-" }}</td>
+                  <td>{{ krjg.jumlahpesan }} </td>
                   <td align="right">Rp{{ krjg.makanans.harga }} </td>
                   <td align="right">
                     <strong
                       >Rp{{
-                        krjg.makanans.harga * krjg.jumlah_pemesanan
+                        krjg.makanans.harga * krjg.jumlahpesan
                       }}</strong
                     >
                   </td>
@@ -127,7 +124,7 @@ export default {
     },
     hapusKeranjang(id) {
       axios
-        .delete("http://localhost:3000/keranjang/" + id)
+        .delete("http://localhost:3000/cart/" + id)
         .then(() => {
           this.$toast.error("Sukses Hapus Keranjang", {
             type: "error",
@@ -138,7 +135,7 @@ export default {
 
           //   Update Data Keranjang
           axios
-            .get("http://localhost:3000/keranjang/")
+            .get("http://localhost:3000/cart/")
             .then((response) => this.setKeranjang(response.data))
             .catch((error) => console.log(error));
         })
@@ -153,7 +150,7 @@ export default {
             // Hapus Semua Keranjang
             this.keranjang.map(function (item) {
               return axios
-              .delete("http://localhost:3000/keranjang/" + item.id)
+              .delete("http://localhost:3000/cart/" + item.id)
                 .catch((error) => console.log(error));
             });
             this.$router.push({ path: "/success-order/" });
@@ -177,14 +174,14 @@ export default {
   },
   mounted() {
     axios
-      .get("http://localhost:3000/keranjang")
+      .get("http://localhost:3000/cart")
       .then((response) => this.setKeranjang(response.data))
       .catch((error) => console.log(error));
   },
   computed: {
     totalHarga() {
       return this.keranjang.reduce(function (items, data) {
-        return items + data.makanans.harga * data.jumlah_pemesanan;
+        return items + data.makanans.harga * data.jumlahpesan;
       }, 0);
     },
   },
