@@ -7,6 +7,7 @@ import TheMakanan from "../views/TheMakanan.vue";
 import FoodDetail from "../views/FoodDetail.vue";
 import TheKeranjang from "../views/TheKeranjang.vue";
 import SuccessOrder from "../views/SuccessOrder.vue";
+import AddProduct from "..//views//AddProduct.vue";
 Vue.use(VueRouter);
 
 const routes = [
@@ -44,6 +45,11 @@ const routes = [
     path: "/about",
     name: "AboutUs",
     component: AboutUs,
+  },
+  {
+    path: "/addproduct",
+    name: "AddProduct",
+    component: AddProduct,
   },
 ];
 

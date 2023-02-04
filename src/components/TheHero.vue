@@ -1,7 +1,7 @@
 <template>
   <div class="hero">
     <!-- Desktop -->
-    <div class="d-none d-md-block">
+    <!-- <div class="d-none d-md-block">
       <div class="row mt-4">
         <div class="col-md-6">
           <div class="d-flex h-100">
@@ -18,27 +18,19 @@
           <img src="../assets/hero.png" width="100%"/>
         </div>
       </div>  
-    </div>
+    </div> -->
 
-    <!-- Mobile -->
-    <div class="d-sm-block d-md-none">
-      <div class="row mt-4">
-        <div class="col-md-4 mb-3">
-          <div class="col-md-6">
-          <img src="../assets/hero.png" width="100%" />
-        </div>
-          <div class="d-flex h-100">
-            <div class="justify-content-center align-self-center">
-              <h2><strong>Deliciuos Food Menu</strong><br />in Your Gadget</h2>
-              <p>Come choose yours, and eat it!</p>
-              <button class="btn btn-lg btn-success">
-                <b-icon-arrow-right></b-icon-arrow-right>Order
-              </button>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
+    <figure class="relative">
+      <img
+        class="rounded-xl h-auto max-w-full mx-auto"
+        src="../assets/Land.png"
+        alt="Food Image"
+      />
+      <figcaption class="absolute ml-2 px-4 text-lg text-white bottom-4 ">
+        <h2 class="text-gray-300"><strong>Order Your</strong><br />Daily Menu</h2>
+        <p class="  ">Choose yours, and eat it!</p>
+      </figcaption>
+    </figure>
   </div>
 </template>
 

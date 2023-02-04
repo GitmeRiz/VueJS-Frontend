@@ -41,10 +41,7 @@
                 <tr v-for="(krjg, index) in keranjang" :key="krjg.id">
                   <th>{{ index + 1 }}</th>
                   <td>
-                    <img
-                      :src="krjg.makanans.url"
-                      class="img-fluid shadow"
-                    />
+                    <img :src="krjg.makanans.url" class="img-fluid shadow"/>
                   </td>
                   <td>{{ krjg.makanans.name }}</td>
                   <td>{{ krjg.ketrangan ? krjg.ketrangan : "-" }}</td>

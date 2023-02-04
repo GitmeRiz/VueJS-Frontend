@@ -7,9 +7,9 @@
       </div>
       <div>
         <br><br>
-        <p><center>Kami adalah mahasiswa dari Institut Teknologi Telkom Surabaya</center></p>
-        <p><center>Saat ini sedang menjalani semester 5</center></p>
-        <p><center>Website eRestoran ini adalah hasil dari kerja sama kami untuk tugas akhir mata kuliah Pemrograman Web</center></p>
+        <p class="text-center">Kami adalah mahasiswa dari Institut Teknologi Telkom Surabaya</p>
+        <p class="text-center">Saat ini sedang menjalani semester 5</p>
+        <p class="text-center">Website eRestoran ini adalah hasil dari kerja sama kami untuk tugas akhir mata kuliah Pemrograman Web</p>
       </div>
     </div>
   </div>

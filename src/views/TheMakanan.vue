@@ -44,12 +44,12 @@
 
 <script>
 // @ is an alias to /src
-import TheNavbar from "@/components/TheNavbar.vue";
-import TheProduct from "@/components/TheProduct.vue";
-import axios from "axios";
+import TheNavbar from '@/components/TheNavbar.vue';
+import TheProduct from '@/components/TheProduct.vue';
+import axios from 'axios';
 
 export default {
-  name: "TheMakanan",
+  name: 'TheMakanan',
   components: {
     TheNavbar,
     TheProduct,
@@ -64,18 +64,18 @@ export default {
     setProducts(data) {
       this.products = data;
     },
-    searchFood(){
+    searchFood() {
       axios
-      .get("http://localhost:3000/products?q=" + this.search)
-      .then((response) => this.setProducts(response.data))
-      .catch((error) => console.log(error));
-    }
+          .get('http://localhost:3000/products?q=' + this.search)
+          .then((response) => this.setProducts(response.data))
+          .catch((error) => console.log(error));
+    },
   },
   mounted() {
     axios
-      .get("http://localhost:3000/products")
-      .then((response) => this.setProducts(response.data))
-      .catch((error) => console.log(error));
+        .get('http://localhost:3000/products')
+        .then((response) => this.setProducts(response.data))
+        .catch((error) => console.log(error));
   },
 };
 </script>

@@ -5,73 +5,49 @@
       type="light"
       class="thenav shadow-sm p-2 mb-4 rounded"
     >
-      <div class="container">
-        <b-navbar-brand href="/">eRestoran
-          <!-- <img src="@/assets/eRestoran.png" width="30%" class="d-inline-block align-top" alt="Kitten"> -->
-        </b-navbar-brand>
+      <div class="container hidden w-full md:block md:w-auto">
+        <b-navbar-brand href="/">eRestoran </b-navbar-brand>
         <b-navbar-toggle target="nav-collapse"></b-navbar-toggle>
 
-        <b-collapse id="nav-collapse" is-nav>
+        <div>
           <b-navbar-nav>
             <li class="nav-item">
               <router-link class="nav-link" to="/">Home</router-link>
             </li>
+
             <li class="nav-item">
               <router-link class="nav-link" to="/products"
                 >Products</router-link
               >
             </li>
-            <li class="nav-item">
-              <router-link class="nav-link" to="/about">About Us</router-link>
-            </li>
           </b-navbar-nav>
+        </div>
 
-          <!-- Right aligned nav items -->
-          <b-navbar-nav class="ml-auto">
-            <li class="nav-item">
-              <router-link class="nav-link" to="/feedback"
-                >Feedback
-              </router-link>
-            </li>
-            <li class="nav-item">
-              <router-link class="nav-link" to="/keranjang"
-                >Keranjang
-                <b-icon-bag></b-icon-bag>
-                <span class="badge badge-success ml-2">{{
-                  updateKeranjang
-                    ? updateKeranjang.length
-                    : jumlah_pesanans.length
-                }}</span>
-              </router-link>
-            </li>
-          </b-navbar-nav>
-        </b-collapse>
+        <b-navbar-nav class="ml-auto">
+          <li class="nav-item">
+            <router-link class="nav-link" to="/addproduct"
+              >Add Products</router-link
+            >
+          </li>
+          <li class="nav-item">
+            <router-link class="nav-link" to="/feedback">Feedback </router-link>
+          </li>
+          <li class="nav-item">
+            <router-link class="nav-link" to="/about">About Us</router-link>
+          </li>
+        </b-navbar-nav>
       </div>
     </b-navbar>
   </div>
 </template>
 
 <script>
-import axios from "axios";
 export default {
-  nama: "TheNavbar",
+  nama: 'TheNavbar',
   data() {
     return {
-      jumlah_pesanans: [],
+      jumlahpesan: [],
     };
-  },
-  props: ["updateKeranjang"],
-
-  methods: {
-    setJumlah(data) {
-      this.jumlah_pesanans = data;
-    },
-  },
-  mounted() {
-    axios
-      .get("http://localhost:3000/cart")
-      .then((response) => this.setJumlah(response.data))
-      .catch((error) => console.log(error));
   },
 };
 </script>

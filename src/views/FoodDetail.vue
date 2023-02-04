@@ -10,8 +10,8 @@
                 <router-link to="/" class="text-dark">Home</router-link>
               </li>
               <li class="breadcrumb-item">
-                <router-link to="/makanan" class="text-dark"
-                  >Makanan</router-link
+                <router-link to="/products" class="text-dark"
+                  >Products</router-link
                 >
               </li>
               <li class="breadcrumb-item active" aria-current="page">

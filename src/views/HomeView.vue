@@ -19,7 +19,7 @@
           <TheProduct :product="product"/>
         </div>
       </div>
-
+      
     </div>
   </div>
 </template>
