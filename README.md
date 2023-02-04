@@ -1,4 +1,4 @@
-### VueJS-Frontend
+# VueJS-Frontend
 
 ## Project setup
 ```
