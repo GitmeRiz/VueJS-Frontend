@@ -7,7 +7,8 @@ import TheMakanan from "../views/TheMakanan.vue";
 import FoodDetail from "../views/FoodDetail.vue";
 import TheKeranjang from "../views/TheKeranjang.vue";
 import SuccessOrder from "../views/SuccessOrder.vue";
-import AddProduct from "..//views//AddProduct.vue";
+import AddProduct from "../views//AddProduct.vue";
+import UpdateProduct from "../views/UpdateProduct.vue"
 Vue.use(VueRouter);
 
 const routes = [
@@ -50,6 +51,11 @@ const routes = [
     path: "/addproduct",
     name: "AddProduct",
     component: AddProduct,
+  },
+  {
+    path: "/updateproduct/:id",
+    name: "UpdateProduct",
+    component: UpdateProduct,
   },
 ];
 

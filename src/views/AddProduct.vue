@@ -137,7 +137,7 @@ export default {
 
       try {
         await axios.post("http://localhost:3000/products", formData);
-        this.$router.push({ path: "/" });
+        this.$router.push({ path: "/products" });
         this.$toast.success("Berhasil menambahkan product baru!", {
           type: "success",
           position: "top-right",
