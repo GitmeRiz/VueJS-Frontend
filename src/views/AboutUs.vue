@@ -12,6 +12,7 @@
         <p class="text-center">Website eRestoran ini adalah hasil dari kerja sama kami untuk tugas akhir mata kuliah Pemrograman Web</p>
       </div>
     </div>
+    
   </div>
 </template>
 

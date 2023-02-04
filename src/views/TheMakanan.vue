@@ -8,33 +8,9 @@
         </div>
       </div>
 
-      <div class="row mt-3">
-        <div class="col">
-          <div class="input-group-prepend">
-            <span class="input-group-text" id="basic-addon1">
-              <b-icon-search />
-            </span>
-          <input
-            v-model="search"
-            type="text"
-            class="form-control"
-            placeholder="Search"
-            aria-label="Search"
-            aria-describedby="basic-addon1"
-            @keyup="searchFood"
-          />
-
-
-          </div>
-        </div>
-      </div>
-
       <div class="row mb-4">
         <div
-          class="col-md-4 mt-4"
-          v-for="product in products"
-          :key="product.id"
-        >
+          class="col-md-4 mt-4" v-for="product in products" :key="product.id">
           <TheProduct :product="product" />
         </div>
       </div>
@@ -64,12 +40,6 @@ export default {
     setProducts(data) {
       this.products = data;
     },
-    searchFood() {
-      axios
-          .get('http://localhost:3000/products?q=' + this.search)
-          .then((response) => this.setProducts(response.data))
-          .catch((error) => console.log(error));
-    },
   },
   mounted() {
     axios
@@ -77,6 +47,7 @@ export default {
         .then((response) => this.setProducts(response.data))
         .catch((error) => console.log(error));
   },
+
 };
 </script>
 

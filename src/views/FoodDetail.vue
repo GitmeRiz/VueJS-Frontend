@@ -46,7 +46,7 @@
               <div class="form-group">
                 <label for="keterangan" class="mt-3">Keterangan</label>
                 <textarea
-                  v-model="pesan.ketrangan"
+                  v-model="pesan.keterangan"
                   class="form-control"
                   placeholder="Pedas, tambah nasi ..."
                 ></textarea>
@@ -85,9 +85,9 @@ export default {
       if (this.pesan.jumlahpesan) {
         this.pesan.makanans = this.makanan;
         axios
-          .post("http://localhost:3000/cart", this.pesan)
+          .post("http://localhost:3000/order", this.pesan)
           .then(() => {
-            this.$router.push({ path: "/keranjang" });
+            this.$router.push({ path: "/success-order" });
             this.$toast.success("Sukses Masuk Keranjang", {
               type: "success",
               position: "top-right",
