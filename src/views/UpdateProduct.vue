@@ -1,9 +1,28 @@
 <template>
     <div>
       <TheNavbar />
-  
+      
       <div class="container mx-auto">
-        <form @submit.prevent="sendFile" enctype="multipart/form-data">
+        <div class="row mt-2">
+        <div class="col">
+          <nav aria-label="breadcrumb">
+            <ol class="breadcrumb">
+              <li class="breadcrumb-item">
+                <router-link to="/" class="text-dark">Home</router-link>
+              </li>
+              <li class="breadcrumb-item">
+                <router-link to="/products" class="text-dark"
+                  >Products</router-link
+                >
+              </li>
+              <li class="breadcrumb-item active" aria-current="page">
+                Update Product
+              </li>
+            </ol>
+          </nav>
+        </div>
+      </div>
+        <form @submit.prevent="updateFile" enctype="multipart/form-data">
           <div class="mb-6">
             <label
               for="email"
@@ -130,30 +149,30 @@
         this.file = this.$refs.file.files[0];
       },
       async updateFile() {
-        const formData = new FormData();
-        formData.append("file", this.file);
-        formData.append("title", this.title);
-        formData.append("harga", this.harga);
-  
-        try {
-          await axios.post("http://localhost:3000/products", formData);
-          this.$router.push({ path: "/products" });
-          this.$toast.success("Berhasil update product!", {
-            type: "success",
-            position: "top-right",
-            duration: 3000,
-            dismissible: true,
-          });
-        } catch (error) {
-          console.error(error);
-          this.$toast.error("Gagal menambahkan update product!", {
-            type: "error",
-            position: "top-right",
-            duration: 3000,
-            dismissible: true,
-          });
-        }
-      },
+  const formData = new FormData();
+  formData.append("file", this.file);
+  formData.append("title", this.title);
+  formData.append("harga", this.harga);
+
+  try {
+    await axios.patch("http://localhost:3000/products/" + this.$route.params.id, formData);
+    this.$router.push({ path: "/products" });
+    this.$toast.success("Berhasil memperbarui product!", {
+      type: "success",
+      position: "top-right",
+      duration: 3000,
+      dismissible: true,
+    });
+  } catch (error) {
+    console.error(error);
+    this.$toast.error("Gagal memperbarui product!", {
+      type: "error",
+      position: "top-right",
+      duration: 3000,
+      dismissible: true,
+    });
+  }
+},
     },
   };
   </script>
