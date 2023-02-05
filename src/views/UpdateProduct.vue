@@ -8,7 +8,7 @@
             <label
               for="email"
               class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
-              >Nama Makanan</label
+              >Update Makanan</label
             >
             <input
               v-model="title"
@@ -37,7 +37,7 @@
             <label
               for="harga"
               class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
-              >Harga</label
+              >Update Harga</label
             >
             <input
               v-model="harga"

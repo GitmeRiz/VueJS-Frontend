@@ -88,7 +88,7 @@ export default {
           .post("http://localhost:3000/order", this.pesan)
           .then(() => {
             this.$router.push({ path: "/success-order" });
-            this.$toast.success("Sukses Masuk Keranjang", {
+            this.$toast.success("Sukses Order", {
               type: "success",
               position: "top-right",
               duration: 3000,
