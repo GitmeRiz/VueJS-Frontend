@@ -46,7 +46,7 @@ export default {
   },
   mounted() {
     axios
-      .get("http://api.gitmeriz.my.id/products")
+      .get("https://api.gitmeriz.my.id/products")
       .then((response) => this.setProducts(response.data))
       .catch((error) => console.log(error));
   },

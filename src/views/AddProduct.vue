@@ -81,7 +81,7 @@ export default {
       formData.append("harga", this.harga);
 
       try {
-        await axios.post("http://api.gitmeriz.my.id/products", formData);
+        await axios.post("https://api.gitmeriz.my.id/products", formData);
         this.$toast.success("Berhasil menambahkan product baru!", {
           type: "success",
           position: "top-right",

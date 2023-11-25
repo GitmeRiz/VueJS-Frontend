@@ -101,7 +101,7 @@ export default {
 
       try {
         await axios.patch(
-          "http://api.gitmeriz.my.id/" + this.$route.params.id,
+          "https://api.gitmeriz.my.id/" + this.$route.params.id,
           formData
         );
         this.$router.push({ path: "/products" });

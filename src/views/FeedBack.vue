@@ -82,7 +82,7 @@ export default {
       if (this.submit.nama && this.submit.email && this.submit.message) {
         this.submit.feedback = this.feedback;
         axios
-          .post("http://api.gitmeriz.my.id/feedback", this.submit)
+          .post("https://api.gitmeriz.my.id/feedback", this.submit)
           .then(() => {
             this.$router.push({ path: "/" });
             this.$toast.success("Feedback sudah terkirim!", {

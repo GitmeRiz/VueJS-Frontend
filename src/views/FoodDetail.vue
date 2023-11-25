@@ -84,7 +84,7 @@ export default {
       if (this.pesan.jumlahpesan) {
         this.pesan.makanans = this.makanan;
         axios
-          .post("http://localhost:3000/order", this.pesan)
+          .post("https://api.gitmeriz.my.id/order", this.pesan)
           .then(() => {
             this.$router.push({ path: "/success-order" });
             this.$toast.success("Sukses Order", {
