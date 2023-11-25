@@ -24,8 +24,7 @@
 
       <div class="row">
         <div class="col-md-6">
-          <img :src="makanan.url" class="img-fluid shadow"
-          />
+          <img :src="makanan.url" class="img-fluid shadow" />
         </div>
         <div class="col-md-6">
           <h2>
@@ -108,12 +107,11 @@ export default {
   },
   mounted() {
     axios
-      .get("http://localhost:3000/products/" + this.$route.params.id)
+      .get("http://api.gitmeriz.my.id/products/" + this.$route.params.id)
       .then((response) => this.setMakanan(response.data))
       .catch((error) => console.log(error));
   },
 };
 </script>
 
-<style>
-</style>
+<style></style>

@@ -10,7 +10,10 @@
 
       <div class="row mb-4">
         <div
-          class="col-md-4 mt-4" v-for="product in products" :key="product.id">
+          class="col-md-4 mt-4"
+          v-for="product in products"
+          :key="product.id"
+        >
           <TheProduct :product="product" />
         </div>
       </div>
@@ -20,12 +23,12 @@
 
 <script>
 // @ is an alias to /src
-import TheNavbar from '@/components/TheNavbar.vue';
-import TheProduct from '@/components/TheProduct.vue';
-import axios from 'axios';
+import TheNavbar from "@/components/TheNavbar.vue";
+import TheProduct from "@/components/TheProduct.vue";
+import axios from "axios";
 
 export default {
-  name: 'TheMakanan',
+  name: "TheMakanan",
   components: {
     TheNavbar,
     TheProduct,
@@ -33,7 +36,7 @@ export default {
   data() {
     return {
       products: [],
-      search: '',
+      search: "",
     };
   },
   methods: {
@@ -43,14 +46,11 @@ export default {
   },
   mounted() {
     axios
-        .get('http://localhost:3000/products')
-        .then((response) => this.setProducts(response.data))
-        .catch((error) => console.log(error));
+      .get("http://api.gitmeriz.my.id/products")
+      .then((response) => this.setProducts(response.data))
+      .catch((error) => console.log(error));
   },
-
 };
 </script>
 
-
-<style>
-</style>
+<style></style>

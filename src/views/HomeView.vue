@@ -15,11 +15,14 @@
       </div>
 
       <div class="row mb-4">
-        <div class="col-md-4 mt-4" v-for = "product in products" :key="product.id">
-          <TheProduct :product="product"/>
+        <div
+          class="col-md-4 mt-4"
+          v-for="product in products"
+          :key="product.id"
+        >
+          <TheProduct :product="product" />
         </div>
       </div>
-      
     </div>
   </div>
 </template>
@@ -44,15 +47,15 @@ export default {
     };
   },
   methods: {
-      setProduct(data){
-        this.products = data;
-      },
+    setProduct(data) {
+      this.products = data;
     },
+  },
   mounted() {
     axios
-      .get("http://localhost:3000/bestproduct")
+      .get("http://api.gitmeriz.my.id/bestproduct")
       .then((response) => this.setProduct(response.data))
-      .catch((error) => console.log(error))
+      .catch((error) => console.log(error));
   },
 };
 </script>

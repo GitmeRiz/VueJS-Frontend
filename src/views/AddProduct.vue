@@ -12,22 +12,7 @@
           >
           <input
             v-model="title"
-            class="
-              bg-gray-50
-              border border-gray-300
-              text-gray-900 text-sm
-              rounded-lg
-              focus:ring-blue-500 focus:border-blue-500
-              block
-              w-full
-              p-2.5
-              dark:bg-gray-700
-              dark:border-gray-600
-              dark:placeholder-gray-400
-              dark:text-white
-              dark:focus:ring-blue-500
-              dark:focus:border-blue-500
-            "
+            class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
             placeholder="Sate"
             required
           />
@@ -41,22 +26,7 @@
           >
           <input
             v-model="harga"
-            class="
-              bg-gray-50
-              border border-gray-300
-              text-gray-900 text-sm
-              rounded-lg
-              focus:ring-blue-500 focus:border-blue-500
-              block
-              w-full
-              p-2.5
-              dark:bg-gray-700
-              dark:border-gray-600
-              dark:placeholder-gray-400
-              dark:text-white
-              dark:focus:ring-blue-500
-              dark:focus:border-blue-500
-            "
+            class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
             placeholder="10000"
             required
           />
@@ -65,18 +35,7 @@
         <div>
           <label for="file" class="label">Upload File</label>
           <input
-            class="
-              block
-              w-full
-              text-sm text-gray-900
-              border border-gray-300
-              rounded-lg
-              cursor-pointer
-              bg-gray-50
-              dark:text-gray-400
-              focus:outline-none
-              dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400
-            "
+            class="block w-full text-sm text-gray-900 border border-gray-300 rounded-lg cursor-pointer bg-gray-50 dark:text-gray-400 focus:outline-none dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400"
             type="file"
             ref="file"
             @change="selectedFile"
@@ -85,21 +44,7 @@
 
         <div class="mt-6">
           <button
-            class="
-              text-white
-              bg-blue-700
-              hover:bg-blue-800
-              focus:ring-4 focus:outline-none focus:ring-blue-300
-              font-medium
-              rounded-lg
-              text-sm
-              w-full
-              sm:w-auto
-              px-4
-              py-2.5
-              text-center
-              dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800
-            "
+            class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-4 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
           >
             Add Product
           </button>
@@ -136,7 +81,7 @@ export default {
       formData.append("harga", this.harga);
 
       try {
-        await axios.post("http://localhost:3000/products", formData);
+        await axios.post("http://api.gitmeriz.my.id/products", formData);
         this.$toast.success("Berhasil menambahkan product baru!", {
           type: "success",
           position: "top-right",
@@ -157,5 +102,4 @@ export default {
 };
 </script>
 
-<style>
-</style>
+<style></style>
